@@ -437,5 +437,7 @@ LOCAL_STATIC_LIBRARIES := $(toybox_libraries)
 LOCAL_CXX_STL := libc++_static
 LOCAL_MODULE_PATH := $(TARGET_RECOVERY_ROOT_OUT)/sbin
 LOCAL_FORCE_STATIC_EXECUTABLE := true
+
+# Install the symlinks.
 LOCAL_POST_INSTALL_CMD := $(hide) $(foreach t,$(ALL_TOOLS),ln -sf ${LOCAL_MODULE} $(LOCAL_MODULE_PATH)/$(t);)
 include $(BUILD_EXECUTABLE)
