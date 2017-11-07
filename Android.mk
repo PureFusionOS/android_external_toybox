@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+LOCAL_CLANG_EXCEPTION_PROJECTS += external/toybox
 LOCAL_PATH := $(call my-dir)
 
 #
@@ -235,7 +235,7 @@ LOCAL_SRC_FILES := $(common_SRC_FILES)
 
 LOCAL_CFLAGS := $(common_CFLAGS)
 
-LOCAL_CLANG := true
+LOCAL_CLANG := false
 
 LOCAL_SHARED_LIBRARIES := liblog libcutils libselinux libcrypto
 
@@ -413,7 +413,7 @@ LOCAL_SRC_FILES := $(common_SRC_FILES)
 
 LOCAL_CFLAGS := $(common_CFLAGS)
 
-LOCAL_CLANG := true
+LOCAL_CLANG := false
 
 LOCAL_STATIC_LIBRARIES := liblog libcutils libselinux libcrypto libm libc
 
@@ -443,7 +443,7 @@ LOCAL_SRC_FILES := $(common_SRC_FILES)
 
 LOCAL_CFLAGS := $(common_CFLAGS)
 
-LOCAL_CLANG := true
+LOCAL_CLANG := false
 
 LOCAL_STATIC_LIBRARIES := liblog libcutils libselinux libcrypto libm libc
 
