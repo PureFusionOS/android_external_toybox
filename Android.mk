@@ -411,7 +411,8 @@ include $(BUILD_EXECUTABLE)
 # static version to be installed in /vendor
 ############################################
 
-ifeq ($(PRODUCT_FULL_TREBLE),true)
+# Guard to prevent overwriting in system
+ifneq ($(TARGET_COPY_OUT_VENDOR),system)
 include $(CLEAR_VARS)
 LOCAL_MODULE := toybox_vendor
 LOCAL_VENDOR_MODULE := true
